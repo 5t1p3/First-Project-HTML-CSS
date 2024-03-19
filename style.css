@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+.nav {
+  height: 5rem;
+  background: #222;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.nav-center h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.nav-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.hero {
+  background: #3b341f;
+  min-height: calc(100vh - 5rem);
+  padding: 4rem 0;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background: linear-gradient(rgba(105, 62, 27, 0.5), rgba(0, 0, 0, 0.9)),
+      url("./img/pexels-elina-sazonova-1907071.jpg") center/cover;
+  }
+}
+.hero-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text {
+  color: #fff;
+  letter-spacing: 1px;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: upToDown 2s linear;
+}
+.text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+.btn {
+  letter-spacing: 2px;
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  border: solid #fff 0.5px;
+  margin-top: 1.25rem;
+  color: white;
+  cursor: pointer;
+  transition: all 1.5s;
+  animation: downToUp 2s linear;
+}
+.btn:hover {
+  background: green;
+  color: red;
+}
+.red {
+  background: red;
+  height: 100vh;
+}
+@keyframes upToDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes downToUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
